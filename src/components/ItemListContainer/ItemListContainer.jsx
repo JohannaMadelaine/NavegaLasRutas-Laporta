@@ -1,11 +1,17 @@
 import React from 'react'
+import ItemList from "../ItemList";
 
-const ItemListContainer = ({greeting}) => {
+
+const ItemListContainer = ({ productos }) => {
   return (
-    <div  className="flex justify-center items-center h-screen">
-        <h1 className="text-4xl font-bold">{greeting}</h1>
-    </div>
-  )
-}
+    <>
+      {productos.length === 0 ? (
+        <p>Cargando...</p>
+      ) : (
+        <ItemList productos={productos} />
+      )}
+    </>
+  );
+};
 
 export default ItemListContainer;
