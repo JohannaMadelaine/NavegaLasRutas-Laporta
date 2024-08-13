@@ -1,11 +1,21 @@
 import { RiShoppingCartLine } from "react-icons/ri";
+import { AppContext } from "../Context";
+import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 
 const CartWidget = () => {
- return (
+  const { cantidadEnCarrito } = useContext(AppContext);
+
+  return (
     <div>
-      <RiShoppingCartLine size={28} />
+      <Link className="menu-link" to="/Cart">
+        <div>
+          <span className="numerito">{cantidadEnCarrito()}</span>
+          <RiShoppingCartLine size={28} />
+        </div>
+      </Link>
     </div>
- );
+  );
 };
 
 export default CartWidget;

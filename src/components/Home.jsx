@@ -1,16 +1,20 @@
 import React from "react";
+import 'animate.css';
 
 const Home = () => {
   return (
-    <div className="flex justify-center items-center flex-col">
-      <video width="70%" height="auto" controls>
-        <source
-          src="https://videocdn.cdnpk.net/videos/f78ad25a-4b66-4c84-a8ad-11d64921d1ca/horizontal/previews/clear/large.mp4?token=exp=1721436140~hmac=c99585161489bee672c6987be91585eeca4eccf5811f4e1303a5a5ec4fe5233c"
-          type="video/mp4"
-        />
-      </video>
+    <div className="flex justify-center items-center flex-col mt-20">
+      <h1 className="text-4xl font-bold text-center mb-8 animate__animated animate__backInDown">
+      ¡ENTRENA DESDE CASA CON LOS MEJORES ARTICULOS DEPORTIVOS!
+      </h1>
+      <img 
+        src="https://img.freepik.com/foto-gratis/grupo-jovenes-entrenando-gimnasio-interior-manteniendo-estilo-vida-deportivo_155003-45875.jpg" 
+        alt="Entrena desde casa" 
+        className="max-w-full h-auto"
+      />
     </div>
   );
 };
 
 export default Home;
+
